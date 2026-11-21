@@ -42,9 +42,10 @@ async function reserve() {
       </section>
       <figure class="photo detail-photo"><img loading="lazy" :src="airflowImage" alt="Close view of the QUIEVENT prototype’s cooling fans and adjustable controller"><figcaption>AIRFLOW, WITH INTENTION <span>STUDIO-EDITED IMAGE</span></figcaption></figure>
       <section class="story wrap">
-        <p class="eyebrow"><span class="line"></span> A CALMER LAPTOP</p>
-        <h2>Give your laptop<br><span>room to breathe.</span></h2>
-        <p>Extra airflow can help carry heat away, giving your laptop’s own fans less work to do and helping it sustain performance during demanding tasks.</p>
+        <div class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><path d="M11 26h9l11-9v30l-11-9h-9V26Z"/><path d="m43 25 10 14m0-14L43 39"/></svg></div>
+        <p class="eyebrow"><span class="line"></span> LESS FAN NOISE</p>
+        <h2>A quieter laptop.<br><span>A calmer workspace.</span></h2>
+        <p>When QUIEVENT helps carry away heat, your laptop's internal fans may not need to work as hard. That can mean less fan noise while you work, create or play.</p>
         <p class="observation">In an early prototype test, an internal laptop fan ran more than 1,000 RPM slower with cooling. Results depend on the laptop, workload and environment; further testing is underway.</p>
       </section>
       <figure class="photo laptop-photo"><img loading="lazy" :src="laptopImage" alt="A laptop resting on the QUIEVENT cooling pad prototype"><figcaption>MADE FOR YOUR WORKSPACE <span>STUDIO-EDITED IMAGE</span></figcaption></figure>
