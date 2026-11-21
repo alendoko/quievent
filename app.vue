@@ -28,7 +28,7 @@ async function reserve() {
     </header>
     <main>
       <section class="hero wrap">
-        <p class="eyebrow"><span class="cross" aria-hidden="true"></span> SWISS-INSPIRED COOLING</p>
+        <p class="eyebrow"><span class="cross" aria-hidden="true"></span> SWISS MADE COOLING</p>
         <h1>Strong cooling.<br><span>Quietly.</span></h1>
         <p class="lead">Meet QUIEVENT. Powerful airflow for your laptop, designed to be heard as little as possible.</p>
         <a class="button" href="#reserve">Register your interest</a>
