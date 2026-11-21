@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 503, statusMessage: 'Reservations are not available yet. Please try again later.' })
   }
   try {
-    await $fetch(`${config.supabaseUrl.replace(/\/$/, '')}/rest/v1/quietus_preorders`, {
+    await $fetch(`${config.supabaseUrl.replace(/\/$/, '')}/rest/v1/quievent_interest`, {
       method: 'POST',
       headers: { apikey: config.supabaseAnonKey, Authorization: `Bearer ${config.supabaseAnonKey}`, Prefer: 'return=minimal' },
       body: { email }

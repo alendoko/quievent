@@ -1,12 +1,10 @@
-# Quietus preorder
+﻿# QUIEVENT interest list
 
-A separate Nuxt project for the Quietus early-access list, ready for Vercel.
+QUIEVENT is a separate Nuxt project using the Nightout production Supabase project for one signup table.
 
-## Setup
+1. Review and run `supabase/quievent_interest.sql` in the SQL Editor of the correct Supabase project. It creates a new table with insert-only access for anonymous visitors; the database administrator can view signups in the dashboard.
+2. In the QUIEVENT Vercel project, set `NUXT_SUPABASE_URL` and `NUXT_SUPABASE_ANON_KEY` to the project URL and publishable/anon key. Never use the service-role key for this integration.
+3. Redeploy after changing environment variables. The same variables may be placed in a local `.env` for development.
+4. Test a signup with an address you control, verify it appears in `quievent_interest`, then remove the test row from the dashboard if desired. Verify public reads and updates are denied.
 
-1. Run `npm install` and copy `.env.example` to `.env`.
-2. Set `NUXT_SUPABASE_URL` and `NUXT_SUPABASE_ANON_KEY` to the Nightout production project's URL and publishable/anon key. Do not use a service-role key.
-3. Review and run `supabase/quietus_preorders.sql` in that project's SQL editor. This creates one new table and an insert-only policy; it does not modify Nightout tables. The policy allows anonymous public inserts, so add abuse protection before a high-traffic launch.
-4. Run `npm run dev` locally. On Vercel, import this project, select Nuxt, and set the same environment variables before deploying.
-
-The form collects email interest only. It does not accept payment or create a binding purchase. Replace placeholder product copy and illustration after product details are confirmed. The SQL is intended to be run once.
+The form records non-binding interest; it does not accept payment. The table permits anonymous inserts directly through Supabase, so it does not include effective rate limiting or bot protection. Add an appropriate server-side abuse-control system before expecting significant traffic.
